@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar a {
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  color: firebrick;
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .logo a span {
+  font-family: "Pacifico", serif;
+  font-weight: bold;
+  color: firebrick;
+}
+
+.nav-menu {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-menu li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.nav-menu li a {
+  font-size: 16px;
+  padding: 8px 15px;
+}
+
+/* Container Navigasi */
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Elemen List */
+
+.nav-list li {
+  list-style: none;
+  margin: 20px 20px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #b22222;
+}
+
+/* Tombol Logout */
+.nav-list li .submit-btn {
+  background-color: #b22222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.nav-list li.btn-logout.hidden {
+  visibility: hidden;
+}
+
+.nav-list li.btn-logout {
+  visibility: visible;
+}
+
+.submit-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.submit-btn {
+  cursor: pointer;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.search-bar form {
+  position: relative;
+  display: inline-block;
+}
+
+.search-bar input[type="text"] {
+  width: 300px;
+  padding: 5px 10px;
+  padding-right: 60px;
+  font-size: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.339);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(115, 115, 115, 0.8);
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input[type="text"]::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search-bar input[type="text"]:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: firebrick;
+}
+
+.search-bar button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.search-bar button:hover {
+  color: firebrick;
+}
+
+/* Container utama */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Section utama */
+.section-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.main-content {
+  flex: 3;
+}
+
+.content-item {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #f9f9f98d;
+}
+
+.content-image {
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.content-image-edit {
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+.content-description {
+  flex: 1;
+  width: 600px;
+}
+
+.content-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.content-title-edit {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+.content-text {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.content-date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.content-link {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  color: #fff;
+  background-color: #b22222;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.content-link:hover {
+  background-color: #000000;
+}
+
+.aside-main {
+  flex: 1;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.aside-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aside-title {
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.aside-item {
+  color: #b22222;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.aside-item:hover {
+  text-decoration: underline;
+  color: #b22222;
+}
+
+/* Container Form */
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f98d;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* List Form */
+.form-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Item Form */
+.form-item {
+  margin-bottom: 15px;
+}
+
+/* Input Text dan File */
+.form-input-text,
+.form-input-file {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Textarea */
+.form-textarea {
+  width: 100%;
+  padding: 10px 10px 100px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Submit button */
+.form-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #b22222;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #000;
+  color: #fff;
+}
